@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiago Rodrigues - Full-Stack Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <i class="fas fa-code"></i>
+          <span>Tiago Rodrigues</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Full-Stack Developer</h1>
+        <p class="hero-subtitle">React • JavaScript • Supabase • Tailwind CSS</p>
+        <p class="hero-description">
+          Building modern, scalable web applications with clean code and best practices.
+          Passionate about learning new technologies and solving real-world problems.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      
+      <!-- Project 1: BudgetFamily -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-info">
+            <h3>
+              <i class="fas fa-wallet"></i>
+              BudgetFamily
+            </h3>
+            <p class="project-date">2026 | React • Supabase • Tailwind CSS</p>
+          </div>
+          <div class="project-badge private-badge">
+            <i class="fas fa-lock"></i> Private Project
+          </div>
+        </div>
+
+        <p class="project-description">
+          A collaborative family budget management application where families can track expenses, manage members, 
+          and view financial analytics with role-based access control. Built with modern web technologies and security best practices.
+        </p>
+
+        <h4>Tech Stack</h4>
+        <div class="tech-stack">
+          <span class="tech-badge">React 18</span>
+          <span class="tech-badge">Vite</span>
+          <span class="tech-badge">Supabase</span>
+          <span class="tech-badge">PostgreSQL</span>
+          <span class="tech-badge">Tailwind CSS v4</span>
+          <span class="tech-badge">Headless UI</span>
+          <span class="tech-badge">Context API</span>
+          <span class="tech-badge">JWT Auth</span>
+        </div>
+
+        <h4>Key Features</h4>
+        <ul class="features-list">
+          <li><i class="fas fa-check-circle"></i> Multi-user authentication with JWT tokens</li>
+          <li><i class="fas fa-check-circle"></i> Admin role system (promote/demote members)</li>
+          <li><i class="fas fa-check-circle"></i> Row-Level Security (RLS) policies for data protection</li>
+          <li><i class="fas fa-check-circle"></i> Real-time notifications (accepted invites, promotions, removals)</li>
+          <li><i class="fas fa-check-circle"></i> Transaction management (create, edit, delete, favorite)</li>
+          <li><i class="fas fa-check-circle"></i> Dashboard with financial analytics</li>
+          <li><i class="fas fa-check-circle"></i> Responsive design (mobile-first approach)</li>
+          <li><i class="fas fa-check-circle"></i> Design system with Tailwind tokens (@theme)</li>
+          <li><i class="fas fa-check-circle"></i> Reusable UI components (Button, Card, Modal, Toast)</li>
+          <li><i class="fas fa-check-circle"></i> Accessibility with focus-visible and Headless UI</li>
+        </ul>
+
+        <!-- Screenshots Gallery -->
+        <h4>Application Screenshots</h4>
+        <div class="screenshots-gallery">
+          <div class="screenshot-item">
+            <img src="images/login.png" alt="Login Page">
+            <p class="screenshot-label">Login</p>
+          </div>
+          <div class="screenshot-item">
+            <img src="images/registo.png" alt="Registration Page">
+            <p class="screenshot-label">Registration</p>
+          </div>
+          <div class="screenshot-item">
+            <img src="images/familia.png" alt="Family Management">
+            <p class="screenshot-label">Family (Create/Join)</p>
+          </div>
+          <div class="screenshot-item">
+            <img src="images/perfil.png" alt="User Profile">
+            <p class="screenshot-label">Profile</p>
+          </div>
+          <div class="screenshot-item">
+            <img src="images/dashboard.png" alt="Dashboard">
+            <p class="screenshot-label">Dashboard</p>
+          </div>
+          <div class="screenshot-item">
+            <img src="images/novaTransacao.png" alt="New Transaction">
+            <p class="screenshot-label">New Transaction</p>
+          </div>
+          <div class="screenshot-item">
+            <img src="images/asMinhasTransacoes.png" alt="My Transactions">
+            <p class="screenshot-label">My Transactions</p>
+          </div>
+          <div class="screenshot-item">
+            <img src="images/favoritos.png" alt="Favorites">
+            <p class="screenshot-label">Favorites</p>
+          </div>
+          <div class="screenshot-item">
+            <img src="images/gestaoDeFamilia.png" alt="Family Management">
+            <p class="screenshot-label">Manage Family</p>
+          </div>
+          <div class="screenshot-item">
+            <img src="images/comentarios.png" alt="Comments & Interactions">
+            <p class="screenshot-label">Comments/Interactions</p>
+          </div>
+        </div>
+
+        <h4>Technologies Beyond Curriculum</h4>
+        <div class="learnings">
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>Supabase</strong> - PostgreSQL + Auth (vs Firebase NoSQL)
+            </div>
+          </div>
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>Row-Level Security (SQL)</strong> - Data authorization at BD level
+            </div>
+          </div>
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>JWT Token Management</strong> - Authentication & refresh flows
+            </div>
+          </div>
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>Tailwind CSS v4</strong> - Design system with @theme tokens
+            </div>
+          </div>
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>Context API</strong> - State management without Redux
+            </div>
+          </div>
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>Headless UI</strong> - Accessible components (Modal, Menu, Dialog)
+            </div>
+          </div>
+        </div>
+
+        <div class="project-footer">
+          <a href="mailto:tmrodes1811@gmail.com?subject=BudgetFamily%20Code%20Access%20Request" class="btn btn-small btn-primary">
+            <i class="fas fa-envelope"></i> Request Repository Access
+          </a>
+          <p class="private-note">
+            <i class="fas fa-info-circle"></i> Private repository available upon request for review
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 2: Flat Rental Platform -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-info">
+            <h3>
+              <i class="fas fa-home"></i>
+              Flat Rental Platform
+            </h3>
+            <p class="project-date">2026 | JavaScript • HTML • CSS</p>
+          </div>
+          <div class="project-links-header">
+            <a href="https://github.com/tmrodes2001/flat-rental-platform" target="_blank" class="icon-link">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <p class="project-description">
+          A full-featured rental property management platform built with vanilla JavaScript. Users can browse properties, 
+          create listings, manage their profile, and handle user sessions. Demonstrates solid DOM manipulation and JavaScript fundamentals.
+        </p>
+
+        <h4>Tech Stack</h4>
+        <div class="tech-stack">
+          <span class="tech-badge">JavaScript ES6+</span>
+          <span class="tech-badge">HTML5</span>
+          <span class="tech-badge">CSS3</span>
+          <span class="tech-badge">DOM Manipulation</span>
+          <span class="tech-badge">LocalStorage</span>
+          <span class="tech-badge">Responsive Design</span>
+        </div>
+
+        <h4>Key Features</h4>
+        <ul class="features-list">
+          <li><i class="fas fa-check-circle"></i> User authentication system (Login/Register)</li>
+          <li><i class="fas fa-check-circle"></i> Property listing with detailed information</li>
+          <li><i class="fas fa-check-circle"></i> Create and manage new property listings</li>
+          <li><i class="fas fa-check-circle"></i> User profile management</li>
+          <li><i class="fas fa-check-circle"></i> Session management with logout</li>
+          <li><i class="fas fa-check-circle"></i> Property images gallery</li>
+          <li><i class="fas fa-check-circle"></i> Responsive grid layouts</li>
+          <li><i class="fas fa-check-circle"></i> Form validation and error handling</li>
+        </ul>
+
+        <h4>Core Functionality</h4>
+        <div class="learnings">
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>DOM Manipulation</strong> - Dynamic HTML rendering and updates
+            </div>
+          </div>
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>Session Management</strong> - User authentication flow and state
+            </div>
+          </div>
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>LocalStorage API</strong> - Persistent data storage
+            </div>
+          </div>
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>Event Handling</strong> - Form submissions and user interactions
+            </div>
+          </div>
+          <div class="learning-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>CSS Grid & Flexbox</strong> - Responsive layouts
+            </div>
+          </div>
+        </div>
+
+        <div class="project-footer">
+          <a href="https://github.com/tmrodes2001/flat-rental-platform" target="_blank" class="btn btn-small btn-primary">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills & Technologies</h2>
+      
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4><i class="fas fa-laptop-code"></i> Frontend</h4>
+          <ul>
+            <li>React 18 (Hooks, Context API)</li>
+            <li>JavaScript ES6+</li>
+            <li>HTML5 & CSS3</li>
+            <li>Tailwind CSS v4</li>
+            <li>Headless UI Components</li>
+            <li>Responsive Design</li>
+            <li>DOM Manipulation</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-database"></i> Backend & Database</h4>
+          <ul>
+            <li>Supabase</li>
+            <li>PostgreSQL</li>
+            <li>Row-Level Security (RLS)</li>
+            <li>JWT Authentication</li>
+            <li>REST APIs</li>
+            <li>Database Design</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-tools"></i> Tools & Workflow</h4>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>Vite (Build Tool)</li>
+            <li>VS Code</li>
+            <li>npm</li>
+            <li>Terminal/CLI</li>
+            <li>GitHub Pages</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-lightbulb"></i> Soft Skills</h4>
+          <ul>
+            <li>Problem Solving</li>
+            <li>Self-Learning</li>
+            <li>Attention to Detail</li>
+            <li>Code Organization</li>
+            <li>Documentation</li>
+            <li>Teamwork (Git Workflow)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          I'm a passionate developer with a strong foundation in modern web technologies. 
+          Currently completing a comprehensive coding bootcamp, I've gone beyond the curriculum to master 
+          advanced technologies like Supabase, Row-Level Security, and design systems.
+        </p>
+        <p>
+          I believe in writing clean, maintainable code and creating user-friendly interfaces. 
+          My approach combines technical excellence with a focus on understanding real-world problems 
+          and delivering practical solutions.
+        </p>
+        <p>
+          When I'm not coding, I'm exploring new technologies, contributing to open-source projects, 
+          and continuously improving my craft. I'm particularly interested in full-stack development 
+          and building scalable applications that make a difference.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p class="contact-subtitle">I'm always open to new opportunities and interesting projects</p>
+      
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <h4>Email</h4>
+          <a href="mailto:tmrodes1811@gmail.com">tmrodes1811@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <h4>GitHub</h4>
+          <a href="https://github.com/tmrodes2001" target="_blank">github.com/tmrodes2001</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <h4>LinkedIn</h4>
+          <a href="https://linkedin.com/in/tiago-rodrigues" target="_blank">linkedin.com/in/tiago-rodrigues</a>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com/tmrodes2001" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/tiago-rodrigues" target="_blank" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:tmrodes1811@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Tiago Rodrigues. All rights reserved.</p>
+      <p class="footer-note">Built with React, JavaScript, and modern web technologies</p>
+    </div>
+  </footer>
+</body>
+</html>
