@@ -18,7 +18,12 @@
           <i class="fas fa-code"></i>
           <span>Tiago Rodrigues</span>
         </div>
-        <ul class="nav-links">
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -27,6 +32,23 @@
       </div>
     </nav>
   </header>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -61,7 +83,7 @@
             <p class="project-date">2026 | JavaScript • HTML • CSS</p>
           </div>
           <div class="project-links-header">
-            <a href="https://github.com/tmrodes2001/projetojavascript.git" target="_blank" class="icon-link">
+            <a href="https://github.com/tmrodes2001/projetojavascript" target="_blank" class="icon-link">
               <i class="fab fa-github"></i>
             </a>
           </div>
@@ -131,8 +153,7 @@
         </div>
 
         <div class="project-footer">
-          <a href="https://github.com/tmrodes2001/flat-rental-platform" target="_blank"
-            class="btn btn-small btn-primary">
+          <a href="https://github.com/tmrodes2001/projetojavascript" target="_blank" class="btn btn-small btn-primary">
             <i class="fab fa-github"></i> View on GitHub
           </a>
         </div>
@@ -271,7 +292,7 @@
         </div>
 
         <div class="project-footer">
-          <a href="https://family-budget-fawn.vercel.app" target="_blank" class="btn btn-small btn-primary">
+          <a href="https://familybudget.vercel.app" target="_blank" class="btn btn-small btn-primary">
             <i class="fas fa-globe"></i> View Live Demo
           </a>
           <p class="private-note">
