@@ -844,31 +844,6 @@ header {
   padding: 1.5rem;
 }
 
-.project-access-note {
-  display: flex;
-  gap: 1rem;
-  padding: 1.25rem;
-  margin-top: 2rem;
-  color: var(--text-lighter);
-  background: rgba(255, 193, 7, 0.08);
-  border: 1px solid rgba(255, 193, 7, 0.35);
-  border-radius: 12px;
-}
-
-.project-access-note > i,
-.project-access-note strong {
-  color: #ffd166;
-}
-
-.project-access-note > i {
-  margin-top: 0.25rem;
-  font-size: 1.25rem;
-}
-
-.project-access-note p {
-  margin-top: 0.25rem;
-}
-
 /* ==========================================
    SKILLS SECTION
    ========================================== */
