@@ -374,12 +374,20 @@ header {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .project-card-link {
   margin-bottom: 0;
+}
+
+.project-card-link:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: calc(50% - 1.25rem);
+  justify-self: center;
 }
 
 .project-card-link > :not(.project-summary) {
@@ -390,8 +398,8 @@ header {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.25rem;
-  min-height: 300px;
-  padding: 1.75rem;
+  min-height: 285px;
+  padding: 2.5rem;
 }
 
 .projects-grid .project-summary-action {
@@ -1171,12 +1179,17 @@ footer p {
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .projects-grid .project-summary {
     min-height: 260px;
-    padding: 1.5rem;
+    padding: 2rem;
+  }
+
+  .project-card-link:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
   }
 
   .project-card-link {
