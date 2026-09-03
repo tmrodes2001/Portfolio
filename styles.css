@@ -515,7 +515,6 @@ header {
 .project-card > .tech-stack,
 .project-card > .features-list,
 .project-card > .learnings,
-.project-card > .screenshots-gallery,
 .project-card > .project-footer {
   margin-left: 3rem;
   margin-right: 3rem;
@@ -718,57 +717,6 @@ header {
   line-height: 1.6;
 }
 
-/* Screenshots Gallery */
-
-.screenshots-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin: 2.5rem 0;
-  padding: 2.5rem;
-  background: rgba(0, 212, 255, 0.05);
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  position: relative;
-  z-index: 1;
-}
-
-.screenshot-item {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 12px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  transition: all 0.3s ease;
-}
-
-.screenshot-item:hover {
-  border-color: var(--primary);
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.2);
-}
-
-.screenshot-item img {
-  width: 100%;
-  height: 400px;
-  object-fit: contain;
-  display: block;
-  border-bottom: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.3);
-  padding: 15px;
-}
-
-.screenshot-label {
-  padding: 1rem;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--primary);
-  text-align: center;
-  margin: 0;
-  background: rgba(0, 212, 255, 0.05);
-}
-
 /* Project Footer */
 
 .project-footer {
@@ -832,10 +780,6 @@ header {
   margin: 2.5rem 0 1rem;
   color: var(--primary);
   font-size: 1.25rem;
-}
-
-.project-detail-card .screenshots-gallery {
-  padding: 1.5rem;
 }
 
 /* ==========================================
@@ -1186,7 +1130,6 @@ footer p {
   .project-card > .tech-stack,
   .project-card > .features-list,
   .project-card > .learnings,
-  .project-card > .screenshots-gallery,
   .project-card > .project-footer {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
@@ -1195,16 +1138,6 @@ footer p {
   .project-header {
     flex-direction: column;
     gap: 1rem;
-  }
-
-  .screenshots-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 1.5rem;
-  }
-
-  .screenshot-item img {
-    height: 250px;
   }
 
   .skills-grid {
@@ -1281,14 +1214,6 @@ footer p {
 
   .tech-stack {
     justify-content: center;
-  }
-
-  .screenshots-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .screenshot-item img {
-    height: 200px;
   }
 
   .social-link {
