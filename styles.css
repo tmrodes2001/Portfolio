@@ -374,7 +374,7 @@ header {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
@@ -383,6 +383,48 @@ header {
 }
 
 .project-card-link > :not(.project-summary) {
+  display: none;
+}
+
+.projects-grid .project-summary {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  min-height: 300px;
+  padding: 1.75rem;
+}
+
+.projects-grid .project-summary-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  margin-left: 0;
+}
+
+.projects-grid .project-summary-content strong {
+  font-size: 1.35rem;
+}
+
+.projects-grid .project-summary-content span {
+  font-size: 0.85rem;
+}
+
+.projects-grid .project-summary-content .project-card-description {
+  margin: 0.5rem 0 0.75rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.projects-grid .project-summary-icon {
+  width: 58px;
+  height: 58px;
+  flex-basis: 58px;
+  font-size: 1.5rem;
+}
+
+.projects-grid .project-summary::after {
   display: none;
 }
 
@@ -407,6 +449,7 @@ header {
 .project-summary::after {
   content: '\2192';
   order: 4;
+  margin-left: auto;
   color: var(--primary);
   font-size: 1.4rem;
   font-weight: 700;
@@ -793,6 +836,31 @@ header {
   padding: 1.5rem;
 }
 
+.project-access-note {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  margin-top: 2rem;
+  color: var(--text-lighter);
+  background: rgba(255, 193, 7, 0.08);
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  border-radius: 12px;
+}
+
+.project-access-note > i,
+.project-access-note strong {
+  color: #ffd166;
+}
+
+.project-access-note > i {
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.project-access-note p {
+  margin-top: 0.25rem;
+}
+
 /* ==========================================
    SKILLS SECTION
    ========================================== */
@@ -1104,6 +1172,11 @@ footer p {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .projects-grid .project-summary {
+    min-height: 260px;
+    padding: 1.5rem;
   }
 
   .project-card-link {
