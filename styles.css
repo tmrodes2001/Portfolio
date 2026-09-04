@@ -1294,7 +1294,6 @@ header {
 .hero::before { width: 1px; height: 100%; top: 0; right: 12%; border-radius: 0; background: rgba(255,255,255,.045); }
 .hero::after { content: ''; position: absolute; left: 0; right: 0; top: 65%; height: 1px; background: rgba(255,255,255,.04); }
 .hero-content { display: grid; grid-template-columns: minmax(0, 880px); align-items: center; }
-.hero > .hero-content { max-width: none; width: 100%; padding-left: clamp(28px, 7vw, 120px); padding-right: clamp(28px, 7vw, 120px); }
 .hero-eyebrow, .section-kicker { color: var(--primary); text-transform: uppercase; letter-spacing: .15em; font-size: .72rem; font-weight: 800; }
 .hero-eyebrow { display: flex; align-items: center; gap: .7rem; margin-bottom: 1.6rem; animation: slideUp .7s ease-out both; }
 .hero-eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 5px rgba(139,255,207,.1); }
