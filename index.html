@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tiago Rodrigues - Full-Stack Developer Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=20260904-1">
+  <link rel="stylesheet" href="styles.css?v=20260904-2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -15,18 +15,19 @@
     <nav class="navbar">
       <div class="container">
         <div class="logo">
-          <i class="fas fa-code"></i>
+          <span class="logo-mark">TR</span>
           <span>Tiago Rodrigues</span>
         </div>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
         <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -40,12 +41,17 @@
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navLinks.classList.toggle('active');
+      const isOpen = hamburger.classList.contains('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      hamburger.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
     });
 
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open navigation');
       });
     });
   </script>
@@ -54,15 +60,36 @@
   <section id="home" class="hero">
     <div class="container hero-content">
       <div class="hero-text">
-        <h1>Full-Stack Developer</h1>
-        <p class="hero-subtitle">Crafting Modern Web Solutions</p>
+        <p class="hero-eyebrow"><span></span> Available for new opportunities</p>
+        <h1>I build digital products that feel <em>simple.</em></h1>
+        <p class="hero-subtitle">Full-Stack Developer based in Portugal</p>
         <p class="hero-description">
-          Building scalable, user-focused applications with clean code and modern technologies.
+          I turn ideas into fast, accessible web applications — from thoughtful interfaces to reliable backend systems.
         </p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <a href="#projects" class="btn btn-primary">Explore my work <i class="fas fa-arrow-down"></i></a>
+          <a href="#contact" class="btn btn-secondary">Let's talk</a>
         </div>
+        <div class="hero-meta" aria-label="Professional highlights">
+          <div><strong>03</strong><span>Selected projects</span></div>
+          <div><strong>Full-stack</strong><span>Frontend to database</span></div>
+          <div><strong>Open</strong><span>To collaborate</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="code-window">
+          <div class="window-bar"><span></span><span></span><span></span><small>portfolio.tsx</small></div>
+          <div class="code-body">
+            <p><b>01</b><span class="code-purple">const</span> developer = &#123;</p>
+            <p><b>02</b>&nbsp;&nbsp;name: <span class="code-green">'Tiago'</span>,</p>
+            <p><b>03</b>&nbsp;&nbsp;focus: <span class="code-green">'useful products'</span>,</p>
+            <p><b>04</b>&nbsp;&nbsp;stack: [<span class="code-green">'React'</span>, <span class="code-green">'Supabase'</span>],</p>
+            <p><b>05</b>&nbsp;&nbsp;curious: <span class="code-purple">true</span></p>
+            <p><b>06</b>&#125;;</p>
+            <p class="code-last"><b>07</b><span class="code-muted">// Let's build something good.</span></p>
+          </div>
+        </div>
+        <div class="floating-chip"><i class="fas fa-circle-check"></i> Clean &amp; scalable</div>
       </div>
     </div>
   </section>
@@ -70,7 +97,9 @@
   <!-- Projects Section -->
   <section id="projects" class="projects">
     <div class="container">
+      <p class="section-kicker">Selected work</p>
       <h2>Featured Projects</h2>
+      <p class="section-intro">A selection of products where I combined engineering, product thinking and attention to detail.</p>
 
       <div class="projects-grid">
 
@@ -297,6 +326,7 @@
   <!-- Skills Section -->
   <section id="skills" class="skills">
     <div class="container">
+      <p class="section-kicker">Toolkit</p>
       <h2>Skills & Technologies</h2>
 
       <div class="skills-grid">
@@ -365,6 +395,7 @@
   <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
+      <p class="section-kicker">A little context</p>
       <h2>About Me</h2>
       <div class="about-content">
         <p>
@@ -389,6 +420,7 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
+      <p class="section-kicker">Have a project in mind?</p>
       <h2>Get In Touch</h2>
       <p class="contact-subtitle">I'm always open to new opportunities and interesting projects</p>
 
