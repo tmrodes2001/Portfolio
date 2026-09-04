@@ -1365,8 +1365,15 @@ footer { padding: 2rem 0; background: #070909; }
   .nav-links { top: 59px; background: rgba(8,10,10,.98); padding-inline: 20px; }
   .nav-links li:last-child a { border: 0; border-radius: 0; padding: 1rem 1.5rem; }
   .hero { padding: 5.5rem 0 4.5rem; }
-  .hero-content { grid-template-columns: 1fr; }
-  .hero-content h1 { white-space: normal; font-size: clamp(2.8rem, 13vw, 4.5rem); }
+  .hero > .hero-content {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: 20px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-text { width: 100%; max-width: none; margin: 0; justify-self: start; }
+  .hero-content h1 { white-space: nowrap; font-size: clamp(2.1rem, 8.8vw, 3.2rem); }
   .hero-meta { gap: 1.25rem; justify-content: space-between; }
   .projects, .skills, .about, .contact { padding: 5rem 0; }
   .projects-grid, .skills-grid { grid-template-columns: 1fr; }
